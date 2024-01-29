@@ -20,11 +20,13 @@ RUN chmod +r /usr/share/keyrings/clickhouse-keyring.gpg
 RUN echo "deb [signed-by=/usr/share/keyrings/clickhouse-keyring.gpg] https://packages.clickhouse.com/deb stable main" | tee /etc/apt/sources.list.d/clickhouse.list 
 RUN apt-get update
 
+# prevent cli popup requesting password
+ENV DEBIAN_FRONTEND=noninteractive
 
 # Install Clickhouse server and client
 RUN apt-get install -y clickhouse-server=${clickhouse_version} clickhouse-client=${clickhouse_version}
 
 # Start
-RUN service clickhouse-server start
+#RUN service clickhouse-server start
 
 
