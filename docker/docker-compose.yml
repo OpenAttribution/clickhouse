@@ -1,0 +1,7 @@
+version: "3"
+
+services:
+  db:
+    image: openattribution/clickhouse
+    ports:
+      - "9000:9000"
