@@ -26,7 +26,13 @@ ENV DEBIAN_FRONTEND=noninteractive
 # Install Clickhouse server and client
 RUN apt-get install -y clickhouse-server=${clickhouse_version} clickhouse-client=${clickhouse_version}
 
-# Start (Should I start it?)
-# RUN service clickhouse-server start
+# Set configs
+#COPY ./clickhouse.conf /etc/clickhouse-server/config.xml
+
+EXPOSE 8123 9000
+
+# Start
+CMD ["/usr/bin/clickhouse-server"]
+
 
 
