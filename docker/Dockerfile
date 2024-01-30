@@ -26,7 +26,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 # Install Clickhouse server and client
 RUN apt-get install -y clickhouse-server=${clickhouse_version} clickhouse-client=${clickhouse_version}
 
-# Start
-RUN service clickhouse-server start
+# Start (Should I start it?)
+# RUN service clickhouse-server start
 
 
