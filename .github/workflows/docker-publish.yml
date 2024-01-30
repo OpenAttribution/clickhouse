@@ -16,8 +16,8 @@ on:
     branches: ["main"]
 
 env:
-  # github.repository as <account>/<repo>
-  IMAGE_NAME: clickhouse
+  # repository as <account>/<repo>
+  IMAGE_NAME: openattribution/clickhouse
 
 jobs:
   build:
