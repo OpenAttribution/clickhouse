@@ -38,7 +38,7 @@ RUN apt-get install -y clickhouse-server=${clickhouse_version} clickhouse-client
 EXPOSE 8123 9000
 
 # Start
-CMD ["/usr/bin/clickhouse-server"]
+# CMD ["/usr/bin/clickhouse-server"]
 
 
 
